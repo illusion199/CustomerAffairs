@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-sm-3 col-12 ">
                     <div class="logo">
-                        <a href="#link"><img src="img/inner-logo.png" alt="Logo"></a>
+                        <a href="{{ asset('/') }}"><img src="img/inner-logo.png" alt="Logo"></a>
                     </div>
                 </div>
 
@@ -32,8 +32,20 @@
                             </li>
                             <li><a href="#">News</a></li>
                             <li><a href="#">About us</a></li>
-                            <li><a href="#">Log in</a></li>
-                            <li class="current-menu-item"><a href="#">sign up</a></li>
+                          @if (Route::has('login'))
+                            <span class="links">
+                                @auth
+                                {{-- <a href="{{ url('/home') }}">Home</a> --}}
+                                @else
+                                <li><a href="{{ route('login') }}">Log in</a></li>
+
+
+                                @if (Route::has('register'))
+                                <li><a href="{{ route('register') }}">sign up</a></li>
+                                @endif
+                                @endauth
+                            </span>
+                           @endif
                         </ul>
                     </div>
                 </div>
