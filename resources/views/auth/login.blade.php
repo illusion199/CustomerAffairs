@@ -141,6 +141,7 @@
                     <p class="pt-10">-- OR Sign In with email --</p>
 
                     <form method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="row">
 
                             <div class="col-12">

@@ -1,7 +1,8 @@
 @include('layouts.head')
-<div id="">    
-    <main>
-        @yield('content')
-    </main>
+<div id="app">
 </div>
+<main>
+    @yield('content')
+</main>
+
 @include('layouts.footer')

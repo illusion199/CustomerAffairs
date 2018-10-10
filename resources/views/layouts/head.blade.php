@@ -22,7 +22,8 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/custom/meanmenu.min.css">
-    <link rel="stylesheet" href="/css/custom/bootstrap.min.css">
+    {{--
+    <link rel="stylesheet" href="/css/custom/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="/css/custom/icofont.css">
 
@@ -31,6 +32,7 @@
     <link rel="stylesheet" href="/css/custom/jquery-ui.css">
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/media.css">
+
 </head>
 
 <body>
