@@ -1,6 +1,6 @@
 php artisan make:controller TodoController --resource --model=Todo
 php artisan make:model Todo -mcr
-
+php artisan make:model /model/Review -mcr
 //create post by factory
 factory('App\Post', 5)->create()
 App\Post::pluck('title')

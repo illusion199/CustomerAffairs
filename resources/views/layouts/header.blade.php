@@ -10,7 +10,7 @@
 
                 <div class="col-xl-2 col-lg-9 col-sm-9 col-12 order-xl-2">
                     <div class="top-link">
-                        <a href="#link" class="top-link-design">Write a review</a>
+                        <a href="/review" class="top-link-design">Write a review</a>
                     </div>
 
                 </div>
@@ -32,20 +32,38 @@
                             </li>
                             <li><a href="#">News</a></li>
                             <li><a href="#">About us</a></li>
-                          @if (Route::has('login'))
-                            <span class="links">
-                                @auth
-                                {{-- <a href="{{ url('/home') }}">Home</a> --}}
-                                @else
-                                <li><a href="{{ route('login') }}">Log in</a></li>
+                            @if (Auth::guest())
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                            @else
+                            <li class="dropdown">
+                                {{-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a> --}}
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
 
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                                {{--
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-                                @if (Route::has('register'))
-                                <li><a href="{{ route('register') }}">sign up</a></li>
-                                @endif
-                                @endauth
-                            </span>
-                           @endif
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul> --}}
+                            </li>
+                            @endif
                         </ul>
                     </div>
                 </div>

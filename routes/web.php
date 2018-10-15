@@ -19,7 +19,8 @@ Route::get('/', function () {
 return view('frontpage');
 });
 
-
+Route::resource('/users','UsersController');
+Route::resource('/review','ReviewController');
 
 Auth::routes();
 
