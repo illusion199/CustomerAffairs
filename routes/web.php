@@ -18,6 +18,9 @@ return view('welcome');
 Route::get('/', function () {
 return view('frontpage');
 });
+/* Route::get('/review/{review}',function(){
+return redirect('/');
+})->where('review','[A-Za-z]+'); */
 
 Route::resource('/user','UsersController');
 Route::resource('/review','ReviewController');

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\PhonebookRequest;
 use App\model\Review;
 use App\User;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Auth;
 
 
@@ -18,9 +19,9 @@ class ReviewController extends Controller
     public function index()
     {
 // return '<h1>From review</h1>';
-$review = Review::all();
+$reviews = Review::all();
 //return $review;
-    return view('review.create', compact('review'));
+    return view('review.review', compact('reviews'));
     }
 
     /**
@@ -30,7 +31,8 @@ $review = Review::all();
      */
     public function create()
     {
-//return view('review.create');
+$review = Review::all();
+return view('review.create', compact('review'));
     }
 
     /**
@@ -39,17 +41,15 @@ $review = Review::all();
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-       
+public function store(PhonebookRequest $request)
+    {      
 
 $comment = new Review;
+$comment->user_id = Auth::user()->id;
+$comment->user_name = Auth::user()->name;
 $comment->userCommenet = $request->userCommenet;
-$comment->user_id = Auth::id();
-
-
 $comment->save();
-//return redirect('review/show');
+return redirect('review');
 
     }
 
@@ -62,20 +62,23 @@ $comment->save();
    // public function show(Review $review)
     public function show($id)
     {
-       $item = Review::find($id);
-       return $item;
-//return view('review.show', compact('users'));
+       $user = Review::find($id);
+//return $user;
+return view('review.show', compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\Review  $review
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Review $review)
+    public function edit($id)
     {
-        //
+$review = Review::find($id);
+//pr($review);
+//return $review;
+return view('review.edit', compact('review'));
     }
 
     /**
@@ -85,9 +88,13 @@ $comment->save();
      * @param  \App\model\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Review $review)
+    public function update(Request $request, $id)
     {
-        //
+$comment = Review::find($id);
+$comment->userCommenet = $request->userCommenet;
+$comment->save();
+//session()->flash('messege', 'Updated Successfully');
+return redirect('review');
     }
 
     /**
@@ -96,8 +103,11 @@ $comment->save();
      * @param  \App\model\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Review $review)
+    public function destroy($id)
     {
-        //
+$comment = Review::find($id);
+$comment->delete();
+session()->flash('messege', 'Deleted Successfully');
+return redirect('review');
     }
 }

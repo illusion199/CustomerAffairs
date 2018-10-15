@@ -4,13 +4,14 @@
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-sm-3 col-12 ">
                     <div class="logo">
-                        <a href="{{ asset('/') }}"><img src="img/inner-logo.png" alt="Logo"></a>
+                        <a href="{{ asset('/') }}"><img src="{{ asset('/img/inner-logo.png')}}" alt="Logo"></a>
                     </div>
                 </div>
 
                 <div class="col-xl-2 col-lg-9 col-sm-9 col-12 order-xl-2">
+
                     <div class="top-link">
-                        <a href="/review" class="top-link-design">Write a review</a>
+                        <a href="{{ asset('/review/create') }}" class="top-link-design">Write a review</a>
                     </div>
 
                 </div>

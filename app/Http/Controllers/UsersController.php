@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\model\Review;
 
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 
@@ -20,7 +20,7 @@ class UsersController extends Controller
     {
        
     $users = User::all();
-   // return $users;
+   return $users;
    
 //return view('users', compact('users'));
     }

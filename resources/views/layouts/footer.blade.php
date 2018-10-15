@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col">
                 <div class="footer-bottom">
-                    <a href="#linl"> <img src="img/logo-footer.png" alt="Logo"></a>
+                    <a href="#linl"> <img src="{{ asset('/img/logo-footer.png')}}" alt="Logo"></a>
                     <p>&copy; 2018 Consumeraffairs. All Rights Reserved.
                     </p>
                 </div>
