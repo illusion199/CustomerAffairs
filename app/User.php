@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 
     ];
 
     /**
@@ -28,7 +28,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-public function usserComments(){
-return $this->hasMany(review::class);
+public function review(){
+return $this->hasMany(model\Review::class);
+//return $this->hasMany('App\Comment', 'foreign_key', 'local_key');
+
 }
 }

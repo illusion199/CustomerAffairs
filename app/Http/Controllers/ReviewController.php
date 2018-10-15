@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\model\Review;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class ReviewController extends Controller
 {
@@ -16,7 +18,9 @@ class ReviewController extends Controller
     public function index()
     {
 // return '<h1>From review</h1>';
-return view('review.create');
+$review = Review::all();
+//return $review;
+    return view('review.create', compact('review'));
     }
 
     /**
@@ -37,22 +41,30 @@ return view('review.create');
      */
     public function store(Request $request)
     {
+       
+
 $comment = new Review;
 $comment->userCommenet = $request->userCommenet;
-$comment->user_id = $request->user_id;
+$comment->user_id = Auth::id();
+
 
 $comment->save();
+//return redirect('review/show');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\Review  $review
+    * @param  \App\model\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function show(Review $review)
+   // public function show(Review $review)
+    public function show($id)
     {
-        //
+       $item = Review::find($id);
+       return $item;
+//return view('review.show', compact('users'));
     }
 
     /**

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\model\Review;
+
 
 use Illuminate\Http\Request;
 
@@ -17,10 +19,10 @@ class UsersController extends Controller
     public function index()
     {
        
- $users = User::all();
-//return $users;
+    $users = User::all();
+   // return $users;
    
-return view('users', compact('users'));
+//return view('users', compact('users'));
     }
 
     /**
@@ -50,9 +52,12 @@ return view('users', compact('users'));
      * @param  \App\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(Users $users)
+    public function show($id)
     {
-        //
+        $users = User::with('Review')->find($id);
+        return $users;
+
+
     }
 
     /**
