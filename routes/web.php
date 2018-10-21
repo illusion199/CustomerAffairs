@@ -28,3 +28,19 @@ Route::resource('/review','ReviewController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Authentication Routes...
+
+
+
+Route::get('admin-login', 'admin\Auth\LoginController@showLoginForm')->name('admin.login');
+Route::post('admin-login', 'admin\Auth\LoginController@login');
+
+
+
+Route::group(['namespace' => 'admin', 'middleware' => 'auth:admin'],function(){
+
+
+Route::get('admin/home','HomeController@index')->name('admin.home');
+
+});

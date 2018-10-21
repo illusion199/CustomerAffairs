@@ -122,7 +122,7 @@
     </div>
 
 </header> --}}
-@include('layouts.header');
+{{-- @include('layouts.header'); --}}
 
 <div class="login-sec pt-60 pb-60 ">
     <div class="container">

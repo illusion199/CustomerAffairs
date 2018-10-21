@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="text-center">Review Blade</h1>
-
-
+<h5 class="text-center pt-3">Review Blade</h5>
 <div class="container">
     <div class="row">
         <ul class="list-group col col-md-8">
@@ -26,19 +24,10 @@
                     <button type="submit" style="border: none;padding: 0;background-color: snow;"><i class="fas fa fa-trash text-success"></i></button>
                 </form>
             </li>
-
             @endforeach
         </ul>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 @endsection

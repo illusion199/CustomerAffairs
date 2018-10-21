@@ -71,17 +71,25 @@
     </div>
 </footer>
 
-<script src="/js/custom/modernizr-3.5.0.min.js"></script>
+<script src="{{ asset('js/custom/jquery-3.2.1.min.js') }}"></script>
+<script src="{{asset('js/custom/jquery-ui.js')}}"></script>
+<script src="/js/custom/owl.carousel.min.js"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+
+{{-- <script src="/js/custom/modernizr-3.5.0.min.js"></script>
 <script src="{{ asset('js/custom/jquery-3.2.1.min.js') }}"></script>
 <script src="{{asset('js/custom/jquery-ui.js')}}"></script>
 <script src="/js/custom/popper.min.js"></script>
 <script src="/js/custom/bootstrap.min.js"></script>
 <script src="/js/custom/owl.carousel.min.js"></script>
-<script src="/js/custom/plugins.js"></script>
+<script src="/js/custom/plugins.js"></script> --}}
 <script src="/js/custom/jquery.meanmenu.min.js"></script>
 <script src="/js/custom/site-script.js"></script>
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+
+
+
+
 </body>
 
 </html>

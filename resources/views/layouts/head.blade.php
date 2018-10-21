@@ -16,6 +16,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -31,6 +34,9 @@
     <link rel="stylesheet" href="/css/custom/jquery-ui.css">
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/media.css">
+
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
 
 </head>
 

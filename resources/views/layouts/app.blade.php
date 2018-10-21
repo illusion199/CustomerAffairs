@@ -53,9 +53,10 @@
             </div>
         </div>
     </nav> --}}
+    <main class="pb-15">
+        @yield('content')
+    </main>
 </div>
-<main>
-    @yield('content')
-</main>
+
 
 @include('layouts.footer')
