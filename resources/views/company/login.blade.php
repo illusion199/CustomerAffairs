@@ -1,9 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
-
-
-<div class="login-sec pt-60 pb-60 ">
+    <div class="login-sec pt-60 pb-60 ">
     <div class="container">
        
         <div class="row">
@@ -11,10 +8,10 @@
 
             <div class="col-md-6 offset-md-3 align-items-center sing-border">
                 <div class="sign-form">
-                    <h5 class="p-3 text-center">Admin LogIn</h5>
+                    <h5 class="p-3 text-center">Company LogIn</h5>
                     @include('admin.includes.messages')
 
-                    <form method="POST" action="{{ route('admin.login') }}">
+                    <form method="POST" action="{{ route('company.login') }}">
                         @csrf
                         <div class="row">
 
@@ -81,8 +78,4 @@
         </div>
     </div>
 </div>
-
-
-
-
 @endsection

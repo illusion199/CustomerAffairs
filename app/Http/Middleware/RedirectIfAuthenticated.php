@@ -32,6 +32,11 @@ class RedirectIfAuthenticated
                     return redirect('admin/home');
                 }
                 break;
+            case 'company':
+                if (Auth::guard($guard)->check()) {
+                    return redirect('company/home');
+                }
+                break;
 
             default:
                 if (Auth::guard($guard)->check()) {

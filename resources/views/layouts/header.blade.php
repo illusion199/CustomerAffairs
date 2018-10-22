@@ -11,8 +11,14 @@
                 <div class="col-xl-2 col-lg-9 col-sm-9 col-12 order-xl-2">
 
                     <div class="top-link">
-                        <a href="{{ asset('/review/create') }}" class="top-link-design">Write a review</a>
+                        {{-- <a href="{{ asset('/review/create') }}" class="top-link-design">Write a review</a> --}}
+                         @if(Auth::Check())
+                        <a href="/review/create" class="top-link-design">Write a review</a>
+                        @else
+                        <a href="{{ route('register') }}" class="top-link-design">Write a review</a>
+                        @endif
                     </div>
+                   
 
                 </div>
                 <div class="col-xl-8  col-lg-12 col-12 order-xl-1">

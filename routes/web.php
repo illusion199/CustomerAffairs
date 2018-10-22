@@ -24,23 +24,31 @@ return redirect('/');
 
 Route::resource('/user','UsersController');
 Route::resource('/review','ReviewController');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Authentication Routes...
-
-
-
 Route::get('admin-login', 'admin\Auth\LoginController@showLoginForm')->name('admin.login');
 Route::post('admin-login', 'admin\Auth\LoginController@login');
+
+
+// Authentication Routes...
+Route::get('company-login', 'company\Auth\LoginController@showLoginForm')->name('company.login');
+Route::post('company-login', 'company\Auth\LoginController@login');
 
 
 
 Route::group(['namespace' => 'admin', 'middleware' => 'auth:admin'],function(){
 
-
 Route::get('admin/home','HomeController@index')->name('admin.home');
 
 });
+
+
+Route::group(['namespace' => 'company', 'middleware' => 'auth:company'], function () {
+
+    Route::get('company/home', 'HomeController@index')->name('company.home');
+
+});
+

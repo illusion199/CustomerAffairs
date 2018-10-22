@@ -60,6 +60,11 @@ case 'admin':
 return redirect()->guest(route('admin.login'));
 break;
 
+
+case 'company':
+return redirect()->guest(route('company.login'));
+break;
+
 default:
 return redirect()->guest(route('login'));
 break;
