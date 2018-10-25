@@ -1,0 +1,623 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: Nafiul Islam
+  Support: nafiulpust@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+/* 1.======================= Theme default css ==================================*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto;
+}
+
+.img {
+    max-width: 100%;
+    transition: all 0.3s ease-out 0s;
+}
+
+.theme-bg {
+    background: #00c853 !important;
+}
+
+.f-left {
+    float: left
+}
+
+.f-right {
+    float: right
+}
+
+.fix {
+    overflow: hidden
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus,
+a:hover, button:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+.form-control:focus {
+    border-color: #00c853;
+}
+
+a,
+button {
+    color: #1696e7;
+    outline: medium none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+hr {
+    border-bottom: 1px solid #eceff8;
+    border-top: 0 none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+label {
+    color: #7e7e7e;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+*::-moz-selection {
+    background: #d6b161;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #444;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #444;
+    color: #fff;
+    text-shadow: none;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    font-size: 14px;
+    opacity: 1;
+}
+
+*::placeholder {
+    color: #555555;
+    font-size: 14px;
+    opacity: 1;
+}
+
+.separator {
+    border-top: 1px solid #f2f2f2
+}
+
+/* button style */
+
+.c-btn {
+    -moz-user-select: none;
+    background: #4272d7 none repeat scroll 0 0;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 15px 40px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.c-btn.c-btn-black {
+    background: #303b41;
+}
+
+.c-btn.c-btn-black:hover {
+    background: #1a1a1a;
+}
+
+.c-btn:hover {
+    background: #106fab;
+    color: #fff
+}
+
+.c-btn.c-btn-large {
+    padding: 10px 25px;
+}
+
+.c-btn-lg {
+    font-weight: 700;
+    padding: 13px 31px;
+}
+
+.c-btn.white-btn:hover {
+    border-color: #ddd;
+    color: #ddd
+}
+
+.c-btn.btn-base.btn-link {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: #1696e7;
+    padding: 0;
+    text-decoration: none;
+}
+
+.c-btn.btn-base.btn-link:hover {
+    color: #106fab;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* 1.======================= Theme default css ==================================*/
+
+header {
+    background: #00c853;
+}
+
+/*============================logo===================================*/
+/*============================end logo===================================*/
+/*============================menu===================================*/
+.main-menu {
+}
+
+.main-menu ul {
+}
+
+.main-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu ul li a {
+    color: #ffffff;
+    display: block;
+    padding: 25px 13px;
+}
+
+.main-menu ul li:hover a {
+    color: #ddd
+}
+
+/* sub-menu */
+/* sub-menu */
+.main-menu ul li ul.sub-menu {
+    background: #171a21 none repeat scroll 0 0;
+    border-top: 3px solid #00c853;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: left;
+    top: 110%;
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+    width: 170px;
+    z-index: 155;
+}
+
+.main-menu ul li:hover ul.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+.main-menu ul li ul.sub-menu li {
+    border-bottom: 2px solid #1e2128;
+    display: block;
+    margin: 0;
+}
+
+.main-menu ul li ul.sub-menu li:last-child {
+    border: 0
+}
+
+.main-menu ul li ul.sub-menu li a {
+    color: #fff;
+    font-size: 12px;
+    padding: 15px 20px;
+}
+
+.main-menu ul li ul.sub-menu li:hover > a {
+    background: #00c853
+}
+
+.main-menu ul li ul.sub-menu li ul.sub-menu {
+    right: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main-menu ul li ul.sub-menu li:hover > ul.sub-menu {
+    visibility: visible;
+    opacity: 1
+}
+
+/*============================end menu===================================*/
+/*============================slider wrapp===================================*/
+
+.slider-wrapper h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.slider-wrapper p {
+    color: #ffffff;
+}
+
+.sing-up-login-btn a {
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: 700;
+}
+
+a.login-btn {
+
+    color: #fff;
+    padding: 9px 35px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+
+a.sign-up-btn {
+    color: #fff;
+    padding: 9px 35px;
+    display: inline-block;
+    border: 1px solid #00cc66;
+    border-radius: 3px;
+    background: #00983f;
+
+}
+
+/*============================slider wrapp===================================*/
+/*============================promo===================================*/
+.promo-head h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.promo-head a {
+    text-decoration: underline;
+    color: #00cc66;
+}
+
+.promo-box h3 {
+    font-size: 26px;
+    color: #00cc66;
+    font-weight: 700;
+}
+
+.promo-icon i {
+    font-size: 40px;
+    color: #00cc66;
+    border: 4px solid #00cc66;
+    border-radius: 50%;
+    padding: 10px 12px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*============================end promo===================================*/
+/*============================quick===================================*/
+.quick {
+    background: #e9f2e2;
+}
+
+.quick-section h3 {
+    font-size: 22px;
+    color: #666666
+}
+
+.quick-section p {
+    color: #666666
+}
+
+a.help-btn {
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
+    background: #00c853;
+    padding: 20px 25px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+a.help-btn b {
+    font-weight: 700;
+}
+
+/*============================end quick===================================*/
+/*============================Service section===================================*/
+.service {
+    background-image: url('/business/img/service-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: center;
+}
+
+.service-icon i {
+    font-size: 80px;
+    color: #fff;
+}
+
+.service-box h3 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.service-box p {
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h3.service-heading {
+    color: #00c853;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/*============================ end Service section===================================*/
+/*============================connect===================================*/
+.connect {
+    background: #00c853
+}
+
+.connect-section h3 {
+    font-weight: 300;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+a.get-start-btn {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 13px 45px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+/*============================connect===================================*/
+/*============================Testimonial===================================*/
+
+.client-testimonial {
+    display: flex;
+    padding: 0 40px;
+}
+
+.client-testimonial.owl-carousel .owl-item img {
+    width: auto;
+}
+
+.client-message {
+    display: flex;
+}
+
+.client-message p, .client-message h3 {
+    font-size: 16px;
+    color: #333333;
+}
+
+.client-message h3 {
+    padding-top: 15px;
+}
+
+.client-testimonial .client-img, .client-testimonial .client-msg {
+    padding: 0 20px;
+}
+
+.client-testimonial .owl-nav div {
+    font-size: 20px;
+    height: 50px;
+    left: -50px;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease 0s;
+    width: 50px;
+    color: #dddddd;
+    font-size: 31px;
+}
+
+.client-testimonial .owl-nav div.owl-next {
+    left: auto;
+    right: -40px;
+}
+
+.client-testimonial .owl-dots {
+    bottom: -65px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.client-testimonial .owl-dot {
+    background: #ddd none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin: 0 2px;
+    width: 10px;
+}
+
+.client-testimonial .owl-dot.active {
+    background: #2059d3;
+}
+
+/*============================Testimonial===================================*/
+/*============================footer===================================*/
+footer {
+    background: #333333;
+}
+
+.footer p {
+    color: #888888;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+/*============================footer===================================*/
+
+.btn-animation:hover {
+    padding-right: 50px;
+}
+
+.btn-animation:hover:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*====================================================================*/
+
+/*sing up*/
+.sign-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #f79921;
+    padding: 10px 30px;
+    display: inline-block;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.sign-form {
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    padding: 50px;
+}
+
+.sign-btn:hover {
+    cursor: pointer;
+
+}
+
+.sign-btn a {
+}
+
+.section-heading {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.sign-form .form-group label {
+    font-size: 16px;
+    color: #333333;
+}
+
+.form-control {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.pb-345 {
+    padding-bottom: 345px;
+}
+
+.sign-text {
+    padding: 15px 29px;
+}
+
+/*sing in*/
+/*sing up*/
+.password-heading h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.password-heading p {
+    font-size: 12px;
+    color: #333333;
+}
+
+.check-link a {
+    color: #00c853;
+}
+
+.check-link label {
+    font-size: 14px;
+    color: #333333;
+}
+.btn-cancel{
+    background: none;
+    border: 1px solid #00c853;
+    color: #333333;
+    padding: 9px 30px;
+    margin-right:10px ;
+}

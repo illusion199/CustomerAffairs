@@ -8,9 +8,8 @@
         @section('editMethod')
         @show
 
-
         <Rate show-text allow-half v-model="valueCustomText">
-            <span style="color: #f5a623">@{{ valueCustomText }}</span>
+            <span style="color: #f5a623" @click="county">@{{ valueCustomText }}</span>
         </Rate>
 
 
@@ -38,17 +37,24 @@
 </div>
 
 <script>
-    export default {
-        data() {
-            return {
-                valueText: 3,
-                valueCustomText: 3.8
-            }
-        },
-        mounted() {
+    var app = new Vue({
+  el: '#app',
+  data: {
+   valueText: 3,
+   valueCustomText: 3.8
+  },
+  methods: {
+    county: function () {
+        console.log(this.$data.valueCustomText)
+    
+    }
+  },
+   mounted() {
             console.log('create Component mounted.')
         }
-    }
+})
+
+
 
 </script>
 @endsection

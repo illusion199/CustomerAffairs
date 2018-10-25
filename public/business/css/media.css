@@ -1,0 +1,109 @@
+/*@media query*/
+@media screen and (min-width: 1300px) {
+
+}
+
+
+@media screen and (max-width: 1330px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+    .promo-head br {
+        display: none;
+    }
+
+    .client-testimonial .owl-nav {
+        display: none;
+    }
+
+    .quick br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mobile-nav.mean-container .mean-bar {
+        top: -55px;
+        background: none;
+    }
+
+    .mobile-nav.mean-container .mean-nav {
+        float: left;
+        width: 100%;
+        background: #00983f;
+        margin-top: 44px;
+        position: absolute;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .slider-wrapper br {
+        display: none;
+    }
+}
+
+/*here is 768*/
+@media screen and (max-width: 767px) {
+    .quick {
+        display: block;
+        text-align: center;
+    }
+    .client-testimonial.owl-carousel .owl-item img{
+        display: inline-block;
+    }
+    .client-message {
+        display: block;
+        text-align: center;
+    }
+    .testimonial-heading{
+        padding-bottom: 15px;
+    }
+    .slider-wrapper h1{
+        font-size: 25px;
+    }
+    .sign-form h1.section-heading{
+        font-size: 25px;
+        padding-bottom: 15px;
+    }
+    .sign-form{
+        padding: 15px;
+    }
+    .sign-btn{
+        padding: 10px;
+    }
+    .sign-text{
+        padding: 15px;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 320px) {
+
+}
+
+@media (max-device-width: 42mm)
+and (min-device-width: 38mm) {
+
+}
+
+@media all and (min-width: 768px) {
+
+}

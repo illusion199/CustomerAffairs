@@ -1,6 +1,13 @@
 @include('layouts.head')
-@include('layouts.header')
-{{-- @include('layouts.front_header') --}}
+
+@if (Request::is('/'))
+    @include('layouts.front_header')
+{{-- @elseif ('/company')
+    @include('layouts.header') --}}
+@else
+     @include('layouts.header')
+@endif
+
 <div id="app">
     {{-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">

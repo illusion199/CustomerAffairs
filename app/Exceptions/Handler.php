@@ -61,8 +61,8 @@ return redirect()->guest(route('admin.login'));
 break;
 
 
-case 'company':
-return redirect()->guest(route('company.login'));
+case 'business':
+return redirect()->guest(route('business.login'));
 break;
 
 default:

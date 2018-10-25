@@ -34,21 +34,19 @@ Route::post('admin-login', 'admin\Auth\LoginController@login');
 
 
 // Authentication Routes...
-Route::get('company-login', 'company\Auth\LoginController@showLoginForm')->name('company.login');
-Route::post('company-login', 'company\Auth\LoginController@login');
+Route::get('business-login', 'business\Auth\LoginController@showLoginForm')->name('business.login');
+Route::post('business-login', 'business\Auth\LoginController@login');
 
 
 
 Route::group(['namespace' => 'admin', 'middleware' => 'auth:admin'],function(){
-
 Route::get('admin/home','HomeController@index')->name('admin.home');
-
 });
 
-
-Route::group(['namespace' => 'company', 'middleware' => 'auth:company'], function () {
-
-    Route::get('company/home', 'HomeController@index')->name('company.home');
-
+Route::group(['namespace' => 'business', 'middleware' => 'auth:business'], function () {  
+    Route::get('business/home', 'HomeController@index')->name('business.home');
 });
+
+Route::resource('business-ac', 'BusinessController');
+
 

@@ -44,9 +44,9 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
-        'company' => [
+        'business' => [
             'driver' => 'session',
-            'provider' => 'companies',
+            'provider' => 'businesses',
         ],
 
         'api' => [
@@ -81,9 +81,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\Model\admin\admin::class,
         ],
-        'companies' => [
+        'businesses' => [
             'driver' => 'eloquent',
-            'model' => App\Model\company\company::class,
+            'model' => App\Model\business\business::class,
         ],
 
         // 'users' => [
@@ -118,8 +118,8 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
-        'companies' => [
-            'provider' => 'companies',
+        'businesses' => [
+            'provider' => 'businesses',
             'table' => 'password_resets',
             'expire' => 60,
         ],
