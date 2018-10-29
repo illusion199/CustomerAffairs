@@ -3,10 +3,66 @@
 namespace App\Http\Controllers;
 use App\model\business\business;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class BusinessController extends Controller
 {
+
+public function showRegisterForm(){
+
+    return view('business.create');
+
+}
+public function register(Request $request){
+$this->validation($request);
+//return $request->all();
+business::create($request->all());
+//return redirect('business.create')->with('status', 'you are registered');
+return $this->create();
+}
+public function showLoginForm(Request $request){
+return view('business.login');
+}
+public function login(Request $request){
+
+$this->validate($request, [
+'email' => 'required|email',
+'password' => 'required',
+]);
+if(Auth::attempt(['email'=> $request->email, 'password'=> $request->password])){
+return 'loged in successfully';
+}
+return 'wrong';
+}
+
+
+
+
+
+public function validation(Request $request){
+
+return $this->validate($request, [
+'firstName' => 'required|string|max:255',
+'lastName' => 'required|string|max:255',
+'email' => 'required|string|email|max:255|unique:businesses',
+'password' => 'required|string|confirmed|min:6',
+'agreed' => 'string',
+'spEmail' => 'string',
+]);
+
+}
+
+
+
+
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +85,12 @@ class BusinessController extends Controller
      */
     public function create()
     {
-      return view('business.create');
+        //$msg = "you are registered";
+//return view('business.company');
+session()->flash('messege', 'created Successfully');
+//return redirect('business.company');
+//return redirect('business.company')->with('status', 'you are registered');
+            return view('business.company');
 
     }
 
@@ -42,7 +103,9 @@ class BusinessController extends Controller
     public function store(Request $request)
     {
         //pr($request);
-        return $request->all();
+        //return $request->all();
+
+
     }
 
     /**

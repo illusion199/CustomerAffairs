@@ -1,18 +1,26 @@
-
 @extends('business.app')
 @section('content')
-    
+@if(session()->has('messege'))
+<!-- <strong>{{session()->get('messege')}}</strong> -->
+
+<div class="alert alert-success">
+    <!--  <strong>Success!</strong> Indicates a successful or positive action. -->
+    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+    <strong>{{session()->get('messege')}}</strong>
+</div>
+
+
+@endif
 <div class="slider-area ">
     <div class="slider-active">
-        <div class="slider-wrapper text-center pl-15 pr-15 pt-115 pb-120"
-             style="background-image: url(business/img/banner/banner.jpg); background-size: cover;background-repeat: no-repeat;height: auto; background-position: center;">
+        <div class="slider-wrapper text-center pl-15 pr-15 pt-115 pb-120" style="background-image: url(business/img/banner/banner.jpg); background-size: cover;background-repeat: no-repeat;height: auto; background-position: center;">
             <h1>Consumer Affairs Business helps <br>
                 grow your business using customer reviews </h1>
             <p class="pt-5 pb-20">Registration is free, easy and gives you the ability to promote your business on
                 Consumer Affairs</p>
             <div class="sing-up-login-btn">
                 <a class=" login-btn btn-animation" href="{{ route('business.login') }}">Log In</a>
-                <a class=" sign-up-btn btn-animation" href="{{ route('business-ac.create') }}">Free Sign Up </a>
+                <a class=" sign-up-btn btn-animation" href="{{ route('business.register') }}">Free Sign Up </a>
             </div>
         </div>
     </div>
@@ -30,7 +38,8 @@
                         <br> help each one of your customers tell the best story possible about your business and share
                         it with the world.
                         <br>
-                        If you’re ready to give it a try for your business, <a href="{{ route('business-ac.create') }}"> register </a> today.
+                        If you’re ready to give it a try for your business, <a href="{{ route('business.register') }}">
+                            register </a> today.
 
                     </p>
                 </div>
@@ -60,7 +69,8 @@
                     <h3 class="pb-5 pt-15 "> Message Center</h3>
                     <p>
                         Gain more feedback about customer satisfaction levels using our free and customized review
-                        collection tools.</p></div>
+                        collection tools.</p>
+                </div>
             </div>
 
         </div>
@@ -89,7 +99,8 @@
                     <div class="service-icon"><i class="icofont icofont-users-social"></i></div>
                     <h3> 5 MILLION
                     </h3>
-                    <p>members</p></div>
+                    <p>members</p>
+                </div>
             </div>
             <div class="col-sm-4">
                 <div class="service-box">
@@ -97,13 +108,15 @@
                     <h3> $15 billion
 
                     </h3>
-                    <p> in transactions</p></div>
+                    <p> in transactions</p>
+                </div>
             </div>
             <div class="col-sm-4">
                 <div class="service-box">
                     <div class="service-icon"><i class="icofont icofont-envelope-open"></i></div>
                     <h3> $315 million</h3>
-                    <p> in revenue</p></div>
+                    <p> in revenue</p>
+                </div>
             </div>
         </div>
     </div>
@@ -123,7 +136,8 @@
                         <div class="client-msg">
                             <p>“We feel that the Consumer Cffairs customer is a qualified customer. They already know
                                 that
-                                they’re looking for flooring and they’re interested in quality service, so we feel it is
+                                they’re looking for flooring and they’re interested in quality service, so we feel it
+                                is
                                 a
                                 better lead when the customer comes in to us from Consumer Affairs.”</p>
                             <h3>
@@ -138,7 +152,8 @@
                         <div class="client-msg">
                             <p>“We feel that the Consumer Cffairs customer is a qualified customer. They already know
                                 that
-                                they’re looking for flooring and they’re interested in quality service, so we feel it is
+                                they’re looking for flooring and they’re interested in quality service, so we feel it
+                                is
                                 a
                                 better lead when the customer comes in to us from Consumer Affairs.”</p>
                             <h3>
@@ -153,7 +168,8 @@
                         <div class="client-msg">
                             <p>“We feel that the Consumer Cffairs customer is a qualified customer. They already know
                                 that
-                                they’re looking for flooring and they’re interested in quality service, so we feel it is
+                                they’re looking for flooring and they’re interested in quality service, so we feel it
+                                is
                                 a
                                 better lead when the customer comes in to us from Consumer Affairs.”</p>
                             <h3>
@@ -179,4 +195,5 @@
         </div>
     </div>
 </div>
+
 @endsection

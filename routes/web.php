@@ -34,8 +34,19 @@ Route::post('admin-login', 'admin\Auth\LoginController@login');
 
 
 // Authentication Routes...
-Route::get('business-login', 'business\Auth\LoginController@showLoginForm')->name('business.login');
-Route::post('business-login', 'business\Auth\LoginController@login');
+Route::get('business-login', 'BusinessController@showLoginForm')->name('business.login');
+Route::post('business-login', 'BusinessController@login');
+
+
+
+
+
+// Authentication Routes...
+Route::get('business-register', 'BusinessController@showRegisterForm')->name('business.register');
+Route::post('business-register', 'BusinessController@register');
+/* 
+Route::get('business-login', 'BusinessController@showRegisterForm')->name('business.register');
+Route::post('business-register', 'BusinessController@register'); */
 
 
 
@@ -47,6 +58,4 @@ Route::group(['namespace' => 'business', 'middleware' => 'auth:business'], funct
     Route::get('business/home', 'HomeController@index')->name('business.home');
 });
 
-Route::resource('business-ac', 'BusinessController');
-
-
+/* Route::resource('business-client', 'BusinessController'); */

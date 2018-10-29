@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict";
+    /*  "use strict"; */
 
     $('.main-menu').meanmenu({
         meanMenuContainer: '.mobile-nav',
@@ -7,16 +7,16 @@
         meanRevealPosition: "right"
     });
     /*Faq*/
-   /* $('.faqTab').on('click', 'li', function () {
-        $(this).addClass('active').siblings().removeClass('active');
-    });
+    /* $('.faqTab').on('click', 'li', function () {
+         $(this).addClass('active').siblings().removeClass('active');
+     });
 
-    $('.faq-tab').click(function () {alert('hi');
-        $('html, body').animate({
-            scrollTop: $("div.middle").offset().top
-        }, 1000)
-    });*/
-    $( ".faqTab" ).accordion();
+     $('.faq-tab').click(function () {alert('hi');
+         $('html, body').animate({
+             scrollTop: $("div.middle").offset().top
+         }, 1000)
+     });*/
+    $(".faqTab").accordion();
     /*Faq*/
     /*Tab Menu Category*/
     $('.tab-category li').on('click', function () {
@@ -68,5 +68,13 @@
     $("li.search-menu").click(function () {
         $(".inner-search").slideToggle(300);
     });
+    setTimeout(function () {
+        if ($(".alert").length > 0) {
+            $(".alert").remove();
+        }
+    }, 5000)
+})(jQuery);
 
-})(jQuery);	
+/* $("#alert").load(function () {
+    $("#alert").delay(3000).slideUp(300);
+}); */

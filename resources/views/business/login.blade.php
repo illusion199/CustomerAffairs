@@ -2,7 +2,7 @@
 @section('content')
 {{-- <div class="login-sec pt-60 pb-60 ">
     <div class="container">
-       
+
         <div class="row">
 
 
@@ -85,7 +85,7 @@
                 <div class="sign-form">
                     <h1 class="section-heading pb-30">Business Sign In</h1>
 
-                   <form method="POST" action="{{ route('business.login') }}">
+                    <form method="POST" action="{{ route('business.login') }}">
                         @csrf
                         <div class="row">
 
@@ -149,7 +149,7 @@
             <div class="col-sm-5 text-center">
                 <div class="sign-text">
                     <p>Don't have an account?</p>
-                    <a href="{{ route('business-ac.create') }}" class="sign-btn">Sign Up Now</a>
+                    <a href="{{ route('business.register') }}" class="sign-btn">Sign Up Now</a>
                     <p class="pt-20">Access exclusive partner offers, special deals and
                         insights from our team of experts</p>
                 </div>

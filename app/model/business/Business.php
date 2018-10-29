@@ -11,4 +11,13 @@ class Business extends Authenticatable
 {
     use Notifiable;
 
+/**
+* The attributes that are mass assignable.
+*
+* @var array
+*/
+protected $fillable = [
+'firstName', 'lastName', 'email', 'password',
+];
+
 }
